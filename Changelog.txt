@@ -1,0 +1,25 @@
+COMP4711 SET 4R
+Group COMP4711Lab0-3
+Eric Lin(Captain), Jason Sekhon(First Mate)
+Repo: https://github.com/COMP4711Lab0-3/starter-todo4
+
+---------------------------
+* added changelog
+
+* added task model and pre-loaded the model
+
+* added home page to show tasks
+
+* added ordered list features
+
+* added wanted controller
+
+* added mtce controller and views
+
+* added user roles controller and added a dropdown on the navbar
+
+* added checkboxes on the page to mark completion
+
+* added task item maintenance (add, edit, showit, submit, cancel, delete functions) w/ item edit page
+
+* unit testing with phpunit
