@@ -10,7 +10,7 @@ class Job extends Rest_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Tasks');
+		$this->load->model('Task');
 	}
 	// Handle an incoming GET ... return a menu item or all of them
     function index_get($key=null)
@@ -34,6 +34,7 @@ class Job extends Rest_Controller {
         $record = array_merge(array('id' => $key), $_POST);
         $this->tasks->add($record);
         $this->response(array('ok'), 200);
+        // $this->response(array($record), 200);
     }
 
     // Handle an incoming PUT - update a todo item
@@ -41,11 +42,12 @@ class Job extends Rest_Controller {
     {
         $record = array_merge(array('id' => $key), $this->_put_args);
         $this->tasks->update($record);
-        $this->response(array('ok'), 200);
+        // $this->response(array('ok'), 200);
+        $this->response(array($record), 200);
     }
 
     // Handle an incoming DELETE - delete a todo item
-    function item_delete($key=null)
+    function index_delete($key=null)
     {
         $this->tasks->delete($key);
         $this->response(array('ok'), 200);
